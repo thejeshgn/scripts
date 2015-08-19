@@ -1,7 +1,4 @@
 local md = load('markdown.lua')
-local domain = request.query.d
-local response = http.request {
-	url = 'http://'..domain
-}
-local response_html = markdown(response)
+local d = request.query.d
+local response_html = markdown(d)
 return response_html, {["Cache-Control"]="no-cache", ["Content-Type"]="text/html"}
