@@ -1,4 +1,4 @@
-local md = require('webscriptio/lib/markdown.lua')
+local md = load('markdown.lua')
 local domain = request.query.d
 local response = http.request {
 	url = 'http://'..domain
